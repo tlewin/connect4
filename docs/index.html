@@ -2,8 +2,109 @@
 <html>
     <head>
         <title>Connect4</title>
+        <style>
+            .container {
+                position: relative;
+                width: 100%;
+                padding-top: 50%;
+            }
+
+            .board {
+                display: flex;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                border: 10px solid #333;
+                border-radius: 15px;
+                flex-flow: row wrap;
+                align-items: stretch;
+                align-content: center;
+            }
+
+            .column {
+                flex: 1 1 auto;
+                height: 100%;
+                cursor: pointer;
+            }
+
+            .column:hover {
+                background-color: #eef;
+            }
+
+            .token {
+                width: 60%;
+                height: 15.6666667%;
+                border-radius: 50%;
+                margin: 3% auto;
+            }
+
+            .token.player1 { background: #e00; }
+            .token.player2 { background: #ff0; }
+        </style>
     </head>
     <body>
-        <h1>Connect4</h1>
+        <div class="container">
+            <div class="board">
+                <div class="column" id="column1">
+                    <div class="token" id="token-6-1"></div>
+                    <div class="token" id="token-5-1"></div>
+                    <div class="token" id="token-4-1"></div>
+                    <div class="token" id="token-3-1"></div>
+                    <div class="token" id="token-2-1"></div>
+                    <div class="token" id="token-1-1"></div>
+                </div>
+                <div class="column" id="column2">
+                    <div class="token" id="token-6-2"></div>
+                    <div class="token" id="token-5-2"></div>
+                    <div class="token" id="token-4-2"></div>
+                    <div class="token" id="token-3-2"></div>
+                    <div class="token" id="token-2-2"></div>
+                    <div class="token" id="token-1-2"></div>
+                </div>
+                <div class="column" id="column3">
+                    <div class="token" id="token-6-3"></div>
+                    <div class="token" id="token-5-3"></div>
+                    <div class="token" id="token-4-3"></div>
+                    <div class="token" id="token-3-3"></div>
+                    <div class="token" id="token-2-3"></div>
+                    <div class="token" id="token-1-3"></div>
+                </div>
+                <div class="column" id="column4">
+                    <div class="token" id="token-6-4"></div>
+                    <div class="token" id="token-5-4"></div>
+                    <div class="token" id="token-4-4"></div>
+                    <div class="token" id="token-3-4"></div>
+                    <div class="token" id="token-2-4"></div>
+                    <div class="token" id="token-1-4"></div>
+                </div>
+                <div class="column" id="column5">
+                    <div class="token" id="token-6-5"></div>
+                    <div class="token" id="token-5-5"></div>
+                    <div class="token" id="token-4-5"></div>
+                    <div class="token" id="token-3-5"></div>
+                    <div class="token" id="token-2-5"></div>
+                    <div class="token" id="token-1-5"></div>
+                </div>
+                <div class="column" id="column6">
+                    <div class="token" id="token-6-6"></div>
+                    <div class="token" id="token-5-6"></div>
+                    <div class="token" id="token-4-6"></div>
+                    <div class="token" id="token-3-6"></div>
+                    <div class="token" id="token-2-6"></div>
+                    <div class="token" id="token-1-6"></div>
+                </div>
+                <div class="column" id="column7">
+                    <div class="token" id="token-6-7"></div>
+                    <div class="token" id="token-5-7"></div>
+                    <div class="token" id="token-4-7"></div>
+                    <div class="token" id="token-3-7"></div>
+                    <div class="token" id="token-2-7"></div>
+                    <div class="token" id="token-1-7"></div>
+                </div>
+            </div>
+        </div>
     </body>
+    <script src="connect4.js"></script>
 </html>
