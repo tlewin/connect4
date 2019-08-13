@@ -25,7 +25,7 @@ var loadModel = function () {
                 switch (_context.prev = _context.next) {
                     case 0:
                         _context.next = 2;
-                        return tf.loadLayersModel(MODEL_URL);
+                        return tf.loadLayersModel(MODEL_URL, { weightPathPrefix: '/connect4/' });
 
                     case 2:
                         model = _context.sent;
