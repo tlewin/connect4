@@ -124,9 +124,9 @@ async function computerPlay(model, board) {
     const predictions = await model.predict(tf.tensor4d(states), { verbose: true });
     const buffer = predictions.bufferSync();
 
-    const argmax = plays.reduce((acc, value) => {
-        if( buffer.get(value) > buffer.get(acc) ) {
-            return value;
+    const argmax = plays.reduce((acc, value, index) => {
+        if( buffer.get(index) > buffer.get(acc) ) {
+            return index;
         }
         return acc;
     }, 0);

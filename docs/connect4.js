@@ -61,9 +61,9 @@ var computerPlay = function () {
                     case 4:
                         predictions = _context2.sent;
                         buffer = predictions.bufferSync();
-                        argmax = plays.reduce(function (acc, value) {
-                            if (buffer.get(value) > buffer.get(acc)) {
-                                return value;
+                        argmax = plays.reduce(function (acc, value, index) {
+                            if (buffer.get(index) > buffer.get(acc)) {
+                                return index;
                             }
                             return acc;
                         }, 0);
